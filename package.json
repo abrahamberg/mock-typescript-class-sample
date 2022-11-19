@@ -9,7 +9,8 @@
     "typescript": "^4.6.4"
   },
   "scripts": {
-    "start": "nodemon ./index.ts",
+    "demo1": "nodemon ./mock-typescript-class/index.ts",
+    "demo2": "nodemon ./manual-mocking/index.ts",
     "test": "jest"
   }
 }
