@@ -16,7 +16,7 @@ jest.mock('./cd-player', () => {
 });
 
 
-it('d', () => {
+it('demonstrates manual mocking ', () => {
     // create a mocked instance 
     const cdPlayer = new CdPlayer.default("argument")
     const sut = new CdPlayerConsumer(cdPlayer)
