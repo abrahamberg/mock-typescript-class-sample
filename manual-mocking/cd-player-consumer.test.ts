@@ -16,16 +16,18 @@ jest.mock('./cd-player', () => {
 });
 
 
+
 it('demonstrates manual mocking ', () => {
     // create a mocked instance 
-    const cdPlayer = new CdPlayer.default("argument")
-    const sut = new CdPlayerConsumer(cdPlayer)
+    const player = new CdPlayer.default("argument")
+    const sut = new CdPlayerConsumer(player)
     sut.playFirstTrack();
-    // test if our sut is calling the mocked class
-    expect(cdPlayer.playTrack).toBeCalledWith(1);
-    expect(cdPlayer.playTrack).toBeCalledTimes(1);
-
-    // demo only 
+    
+    //test if our sut is calling the mocked class
+    expect(player.playTrack).toBeCalledWith(1);
+    expect(player.playTrack).toBeCalledTimes(1);
+    
+    //test other exported functions and variables  
     expect(CdPlayer.getLogs()).toBe('mocked log')
     expect(CdPlayer.serialNumber).toBe('mocked serial')
 
